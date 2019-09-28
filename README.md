@@ -2,7 +2,7 @@
 
 How to use:<br>
 
-<b>First, import Pick Helper.<br>
+<b>First, import Pick Helper.</b><br>
 import PickHelper from pickhelper;<br>
 
 
