@@ -1,0 +1,28 @@
+{
+  "name": "pick-helper",
+  "version": "1.0.0",
+  "description": "Three JS Raycaster Builder",
+  "main": "pickerHelper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonTByrd/pickerHelper.git"
+  },
+  "keywords": [
+    "picker",
+    "raycaster",
+    "threejs",
+    "three",
+    "js",
+    "javascript",
+    "class"
+  ],
+  "author": "Jason Byrd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonTByrd/pickerHelper/issues"
+  },
+  "homepage": "https://github.com/JasonTByrd/pickerHelper#readme"
+}
