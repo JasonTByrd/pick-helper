@@ -1,10 +1,14 @@
 <b>This is Pick Helper. It does one thing, picks objects in a 3d environment created with three js for you.</b>
 
-How to use:
+How to use:<br>
+
+import PickHelper from pickhelper<br>
 
 
 <b>First create your pick helper.</b><br>
-pickHelper = new PickHelper;
+pickHelper = new PickHelper(this.scene, this.camera);<br>
+or<br>
+pickHelper = new PickHelper(scene, camera)<br>
 
 
 <b>Now, use the .pick command to get the mesh your cursor is over.</b><br>
