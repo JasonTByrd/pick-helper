@@ -2,10 +2,11 @@
 
 How to use:<br>
 
-import PickHelper from pickhelper<br>
+<b>First, import Pick Helper.<br>
+import PickHelper from pickhelper;<br>
 
 
-<b>First create your pick helper.</b><br>
+<b>Next, create your pick helper.</b><br>
 pickHelper = new PickHelper(this.scene, this.camera);<br>
 or<br>
 pickHelper = new PickHelper(scene, camera)<br>
