@@ -48,8 +48,8 @@ export default class PickHelper {
         return this.pickedObject;
     }
 
-    pickCenter(event, scene, camera, mount) {
-        this.setPickPositionCenter(event, mount);
+    pickCenter(scene, camera, mount) {
+        this.setPickPositionCenter(mount);
         let normalizedPosition = this.pickPosition;
 
         this.raycaster.setFromCamera(normalizedPosition, camera);
@@ -67,13 +67,13 @@ export default class PickHelper {
     setPickPosition(event, mount) {
         const pos = this.getCanvasRelativePosition(event, mount);
         this.pickPosition.x = (pos.x / mount.clientWidth ) *  2 - 1;
-        this.pickPosition.y = (pos.y / mount.clientHeight) * -2 + 1;  // note we flip Y
+        this.pickPosition.y = (pos.y / mount.clientHeight) * -2 + 1;
     }
 
-    setPickPositionCenter(event, mount) {
+    setPickPositionCenter(mount) {
         const pos = {x: mount.clientWidth / 2, y: mount.clientHeight / 2};
         this.pickPosition.x = (pos.x / mount.clientWidth ) *  2 - 1;
-        this.pickPosition.y = (pos.y / mount.clientHeight) * -2 + 1;  // note we flip Y
+        this.pickPosition.y = (pos.y / mount.clientHeight) * -2 + 1;
     }
 
     getCanvasRelativePosition(event, mount) {
@@ -85,10 +85,6 @@ export default class PickHelper {
     }
 
     clearPickPosition() {
-        // unlike the mouse which always has a position
-        // if the user stops touching the screen we want
-        // to stop picking. For now we just pick a value
-        // unlikely to pick something
         this.pickPosition.x = -100000;
         this.pickPosition.y = -100000;
     }
