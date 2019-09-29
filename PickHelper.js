@@ -48,8 +48,30 @@ export default class PickHelper {
         return this.pickedObject;
     }
 
+    pickCenter(event, scene, camera, mount) {
+        this.setPickPositionCenter(event, mount);
+        let normalizedPosition = this.pickPosition;
+
+        this.raycaster.setFromCamera(normalizedPosition, camera);
+
+        const intersectedObjects = this.raycaster.intersectObjects(scene.children);
+        if (intersectedObjects.length) {
+        this.pickedObject = intersectedObjects[0].object;
+        }
+        else {
+        this.pickedObject = false;
+        }
+        return this.pickedObject;
+    }
+
     setPickPosition(event, mount) {
         const pos = this.getCanvasRelativePosition(event, mount);
+        this.pickPosition.x = (pos.x / mount.clientWidth ) *  2 - 1;
+        this.pickPosition.y = (pos.y / mount.clientHeight) * -2 + 1;  // note we flip Y
+    }
+
+    setPickPositionCenter(event, mount) {
+        const pos = {x: mount.clientWidth / 2, y: mount.clientHeight / 2};
         this.pickPosition.x = (pos.x / mount.clientWidth ) *  2 - 1;
         this.pickPosition.y = (pos.y / mount.clientHeight) * -2 + 1;  // note we flip Y
     }

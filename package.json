@@ -1,5 +1,5 @@
 {
-  "name": "pickhelper",
+  "name": "pick-helper",
   "version": "1.0.0",
   "description": "Raycaster builder for threejs",
   "main": "PickHelper.js",
