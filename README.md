@@ -25,6 +25,8 @@ pickHelper.pickCenter(event, this.scene, this.camera, this.mount);<br>
 or<br>
 pickHelper.pickCenter(event, scene, camera, mount);<br>
 
-I have no interest on financial gain for this code and all are permitted to use it as they see fit.<br>
+
+<b>Disclaimer</b>
+I have no interest in financial gain for this code and all are permitted to use it as they see fit.<br>
 special thanks to the creator of this tutorial: https://threejsfundamentals.org/threejs/lessons/threejs-picking.html<br>
 This code is based off their PickHelper class but converted into an object-oriented form for use in React, etc. and all contained within said class.
